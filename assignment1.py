@@ -10,19 +10,19 @@ print(f"\n{'!!! Double check these numbers !!!':^75}\n")
 print(f"{' Q1 ':-^75}")
 x: float = sum([k ** 2 * sin(0.1 * k ** 2) for k in range(-3, 5)])
 # Use this if you pussy and scared of one-liners
-# x: float = 0.0
+# x_sym: float = 0.0
 # for k in range(-3, 5):
-#     x += k ** 2 * sin(0.1 * k ** 2)
+#     x_sym += k ** 2 * sin(0.1 * k ** 2)
 print(f"{x=:.4f}")
 
 # Q2
 print(f"{' Q2 ':-^75}")
 x: float = sum([sum([sqrt(j) * k ** 2 * sin(0.1 * (k - j) ** 2) for k in range(-3, 5)]) for j in range(1, 4)])
 # Use this if you pussy and scared of one-liners
-# x: float = 0.0
+# x_sym: float = 0.0
 # for j in range(1, 4):
 #     for k in range(-3, 5):
-#         x += sqrt(j) * k ** 2 * sin(0.1 * (k - j) ** 2)
+#         x_sym += sqrt(j) * k ** 2 * sin(0.1 * (k - j) ** 2)
 print(f"{x=:.4f}")
 
 # Q3

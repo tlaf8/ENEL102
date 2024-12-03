@@ -29,10 +29,10 @@ x_values: np.ndarray = np.linspace(0, 2, 100)
 int_values: np.ndarray = np.polyval(f_coefficients, x_values)
 
 fig = plt.figure(0)
-plt.plot(x_values, np.polyval(f_coefficients, x_values), label="f(x)")
-plt.plot(x_values, np.polyval(np.polyder(f_coefficients), x_values), label="d/dx f(x)")
-plt.plot(x_values, np.polyval(np.polyder(np.polyder(f_coefficients)), x_values), label="d^2/dx^2 f(x)")
-plt.plot(x_values, np.polyval(np.polyint(f_coefficients), x_values), label="Integral(f(x), 0, x)")
+plt.plot(x_values, np.polyval(f_coefficients, x_values), label="f(x_sym)")
+plt.plot(x_values, np.polyval(np.polyder(f_coefficients), x_values), label="d/dx f(x_sym)")
+plt.plot(x_values, np.polyval(np.polyder(np.polyder(f_coefficients)), x_values), label="d^2/dx^2 f(x_sym)")
+plt.plot(x_values, np.polyval(np.polyint(f_coefficients), x_values), label="Integral(f(x_sym), 0, x_sym)")
 plt.legend()
 print("Let's plot this bitch")
 plt.grid(True)
@@ -48,7 +48,7 @@ print(f"Real roots appear to be: {real_roots}")
 # Q5
 print(f"{' Q5 ':-^75}")
 f_coefficients: list[int] = [1, 0, 2, 1]
-print(f"The coefficients in descending power of x are as follows: \
+print(f"The coefficients in descending power of x_sym are as follows: \
 {                                        
     np.convolve(                                        # Run 4
         np.convolve(                                    # Run 3
@@ -75,7 +75,7 @@ plt.show()
 # Q7
 print(f"{' Q7 ':-^75}")
 try:
-    # First 500 samples are the x coordinates and the rest are y
+    # First 500 samples are the x_sym coordinates and the rest are y
     points: np.ndarray = np.load("means.npy")
 
 except FileNotFoundError:
