@@ -1,3 +1,24 @@
+try:
+    import numpy as np
+    import matplotlib.pyplot as plt
+    from sympy import symbols, diff, exp
+    from scipy.optimize import root_scalar, root
+    from scipy.integrate import tplquad, quad, odeint
+    import badpaclkage
+except ImportError:
+    import subprocess as sp
+    requirements = ["numpy", "matplotlib", "sympy", "scipy"]
+    try:
+        print("python -m venv venv")
+        for req in requirements:
+            print(f"venv\\Scripts\\pip install {req}")
+        print("\033[92mDone installing.\033[0m Run this command: \033[94mvenv\\Scripts\\python assignment4.py\033[0m")
+
+    except (Exception,) as e:
+        print(f"Something went wrong installing packages: {e}")
+
+    exit(0)
+
 import numpy as np
 import matplotlib.pyplot as plt
 from sympy import symbols, diff, exp
