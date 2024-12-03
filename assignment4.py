@@ -9,9 +9,9 @@ except ImportError:
     import subprocess as sp
     requirements = ["numpy", "matplotlib", "sympy", "scipy"]
     try:
-        print("python -m venv venv")
+        sp.call("python -m venv venv".split())
         for req in requirements:
-            print(f"venv\\Scripts\\pip install {req}")
+            sp.call(f"venv\\Scripts\\pip install {req}".split())
         print("\033[92mDone installing.\033[0m Run this command: \033[94mvenv\\Scripts\\python assignment4.py\033[0m")
 
     except (Exception,) as e:
