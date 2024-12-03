@@ -4,7 +4,6 @@ try:
     from sympy import symbols, diff, exp
     from scipy.optimize import root_scalar, root
     from scipy.integrate import tplquad, quad, odeint
-    import badpaclkage
 except ImportError:
     import subprocess as sp
     requirements = ["numpy", "matplotlib", "sympy", "scipy"]
